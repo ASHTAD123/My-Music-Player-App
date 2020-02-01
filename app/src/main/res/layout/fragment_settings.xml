@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:paddingTop="11dp"
+    android:background="#ffffff"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/shakeToChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#212121"
+        android:layout_marginStart="20dp"
+        android:textSize="17sp"
+        android:text="@string/shake_to_change_song"
+    />
+
+    <Switch
+        android:id="@+id/switchShape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/shakeToChange"
+        android:backgroundTint="#212121"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_margin="25dp"
+        android:layout_below="@+id/shakeToChange"
+        android:background="#bdbdbd"/>
+    </RelativeLayout>

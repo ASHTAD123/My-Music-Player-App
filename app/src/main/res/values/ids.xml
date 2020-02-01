@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="seekbar"       type="id"/>
+    <item name="seekbarLayout" type="id"/>
+    <item name="previousBtn"   type="id"/>
+    <item name="nextBtn"       type="id"/>
+    <item name="loopBtn"       type="id"/>
+    <item name="shuffleBtn"    type="id"/>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:id="@+id/content_main"
+    android:focusable="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:id="@+id/visibleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/content_Main"/>
+
+
+        <RelativeLayout
+            android:id="@+id/hiddenBarMainScreen"
+            android:layout_width="match_parent"
+            android:clickable="false"
+            android:layout_height="100dp"
+            android:visibility="invisible"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary">
+
+            <ImageButton
+                android:id="@+id/PlayPauseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="31dp"
+                android:background="@drawable/pause_icon"
+                android:contentDescription="@string/todo"
+                tools:ignore="RtlHardcoded" />
+
+            <ImageView
+                android:id="@+id/DefaultMusic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:layout_marginStart="13dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/now_playing_bar_eq_image"
+                android:contentDescription="@string/_1"
+                />
+
+            <TextView
+                android:id="@+id/nowPlayingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11dp"
+                android:text="@string/now_playing"
+                android:textColor="#bdbdbd"
+                android:layout_toEndOf="@+id/DefaultMusic"
+                android:layout_toStartOf="@id/PlayPauseBtn"
+                />
+
+
+            <TextView
+                android:id="@+id/songTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/nowPlayingBar"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="160dp"
+                android:singleLine="true"
+                android:text="@string/song_title"
+                android:layout_alignStart="@+id/nowPlayingBar"
+                android:textColor="#ffffff"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noSongs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:visibility="invisible">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/you_do_not_have_any_songs_at_the_moment"
+        android:textColor="#000000"
+        />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
